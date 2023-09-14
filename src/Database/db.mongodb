@@ -1,0 +1,460 @@
+db.createCollection("tipo_documento");
+db.tipo_documento.insertMany([
+  { tipodoc_id: 1, nombre: "Cédula de Ciudadanía", abreviatura: "C.C" },
+  { tipodoc_id: 2, nombre: "Tarjeta de identidad", abreviatura: "T.I" },
+  { tipodoc_id: 3, nombre: "Registro Civil", abreviatura: "R.C" },
+  { tipodoc_id: 4, nombre: "Cédula de Extranjería", abreviatura: "C.E" },
+  {
+    tipodoc_id: 5,
+    nombre: "Número de Identificación Personal",
+    abreviatura: "N.I.P",
+  },
+]);
+
+db.createCollection("genero");
+db.tipo_documento.insertMany([
+  { gen_id: 1, nombre: "Masculino", abreviatura: "M" },
+  { gen_id: 2, nombre: "Femenino", abreviatura: "F" },
+]);
+
+db.createCollection("acudiente");
+db.acudiente.insertMany([
+  {
+    acu_id: 1,
+    nombre: "María José Moreno",
+    telefono: "+34 992766008",
+    direccion: "Carrer Pacheco, 31, 7º 7º, 25257, Mireles Alta",
+  },
+  {
+    acu_id: 2,
+    nombre: "Natalia Reyes",
+    telefono: "+34 804010586",
+    direccion: "Travessera Marco, 8, 2º D, 30823, A Soria Alta",
+  },
+  {
+    acu_id: 3,
+    nombre: "Susana Diaz",
+    telefono: "+34 944310586",
+    direccion: "Ruela Quintero, 222, Ático 3º, 95397, Deleón de las Torres",
+  },
+  {
+    acu_id: 4,
+    nombre: "Iker Gil",
+    telefono: "+34 955947255",
+    direccion: "Carrer Francisco, 92, 2º F, 26172, Vall Fonseca del Pozo",
+  },
+  {
+    acu_id: 5,
+    nombre: "Irene Saez",
+    telefono: "+34 963786419",
+    direccion: "Travessera Cantú, 652, 69º 0º, 36799, L' Sáenz",
+  },
+  {
+    acu_id: 6,
+    nombre: "María Josefa Cruz",
+    telefono: "+34 966011144",
+    direccion: "Camino Valdés, 1, 63º E, 05302, O Madrigal",
+  },
+  {
+    acu_id: 7,
+    nombre: "Cesar Rodriguez",
+    telefono: "+34 949615357",
+    direccion: "Carrer Millán, 129, 0º C, 55631, A Terán",
+  },
+  {
+    acu_id: 8,
+    nombre: "Ana Belén Cano",
+    telefono: "+34 962539746",
+    direccion: "Carrer Tafoya, 6, 7º C, 52803, O Sisneros",
+  },
+  {
+    acu_id: 9,
+    nombre: "María Soledad Peña",
+    telefono: "+34 962651947",
+    direccion: "Camino Delrío, 44, 42º E, 56689, El Carreón",
+  },
+  {
+    acu_id: 10,
+    nombre: "Isabel Marquez",
+    telefono: "+34 902374214",
+    direccion: "Avinguda Ona, 807, Bajo 4º, 02600, A Araña Medio",
+  },
+]);
+
+db.createCollection("usuario");
+db.usuario.insertMany([
+  {
+    usu_id: 1,
+    usu_nombres: "A",
+    usu_apellidos: "Alberto",
+    usu_telefono: "5646545654",
+    uso_direccion: "Calle 10",
+    uso_email: "pepin@gmail.com",
+    uso_tipodoc: 1,
+    uso_genero: 1,
+    uso_acudiente: 1,
+  },
+  {
+    usu_id: 2,
+    usu_nombres: "B",
+    usu_apellidos: "Alberto",
+    usu_telefono: "5646545654",
+    uso_direccion: "Calle 10",
+    uso_email: "pepin@gmail.com",
+    uso_tipodoc: 1,
+    uso_genero: 1,
+    uso_acudiente: 1,
+  },
+  {
+    usu_id: 3,
+    usu_nombres: "Pepin",
+    usu_apellidos: "Alberto",
+    usu_telefono: "5646545654",
+    uso_direccion: "Calle 10",
+    uso_email: "pepin@gmail.com",
+    uso_tipodoc: 1,
+    uso_genero: 1,
+    uso_acudiente: 1,
+  },
+  {
+    usu_id: 4,
+    usu_nombres: "Nicolax",
+    usu_apellidos: "Alberto",
+    usu_telefono: "5646545654",
+    uso_direccion: "Calle 10",
+    uso_email: "pepin@gmail.com",
+    uso_tipodoc: 1,
+    uso_genero: 1,
+    uso_acudiente: 1,
+  },
+  {
+    usu_id: 5,
+    usu_nombres: "Pepin",
+    usu_apellidos: "Alberto",
+    usu_telefono: "5646545654",
+    uso_direccion: "Calle 10",
+    uso_email: "pepin@gmail.com",
+    uso_tipodoc: 1,
+    uso_genero: 1,
+    uso_acudiente: 1,
+  },
+  {
+    usu_id: 6,
+    usu_nombres: "Jean",
+    usu_apellidos: "Alberto",
+    usu_telefono: "5646545654",
+    uso_direccion: "Calle 10",
+    uso_email: "pepin@gmail.com",
+    uso_tipodoc: 1,
+    uso_genero: 1,
+    uso_acudiente: 1,
+  },
+  {
+    usu_id: 7,
+    usu_nombres: "Amed",
+    usu_apellidos: "Alberto",
+    usu_telefono: "5646545654",
+    uso_direccion: "Calle 10",
+    uso_email: "pepin@gmail.com",
+    uso_tipodoc: 1,
+    uso_genero: 1,
+    uso_acudiente: 1,
+  },
+  {
+    usu_id: 8,
+    usu_nombres: "Julian",
+    usu_apellidos: "Alberto",
+    usu_telefono: "5646545654",
+    uso_direccion: "Calle 10",
+    uso_email: "pepin@gmail.com",
+    uso_tipodoc: 1,
+    uso_genero: 1,
+    uso_acudiente: 1,
+  },
+  {
+    usu_id: 9,
+    usu_nombres: "Akio",
+    usu_apellidos: "Alberto",
+    usu_telefono: "5646545654",
+    uso_direccion: "Calle 10",
+    uso_email: "pepin@gmail.com",
+    uso_tipodoc: 1,
+    uso_genero: 1,
+    uso_acudiente: 1,
+  },
+  {
+    usu_id: 10,
+    usu_nombres: "Fabio",
+    usu_apellidos: "Alberto",
+    usu_telefono: "5646545654",
+    uso_direccion: "Calle 10",
+    uso_email: "pepin@gmail.com",
+    uso_tipodoc: 1,
+    uso_genero: 1,
+    uso_acudiente: 1,
+  },
+]);
+
+db.createCollection("cita");
+db.cita.insertMany([
+  {
+    cit_fecha: new Date("2014-10-19"),
+    cit_estado: 1,
+    cit_medico: 1,
+    cit_datoUsuario: 1,
+  },
+  {
+    cit_fecha: new Date("2014-11-20"),
+    cit_estado: 4,
+    cit_medico: 1,
+    cit_datoUsuario: 2,
+  },
+  {
+    cit_fecha: new Date("2014-08-14"),
+    cit_estado: 5,
+    cit_medico: 3,
+    cit_datoUsuario: 3,
+  },
+  {
+    cit_fecha: new Date("2015-10-19"),
+    cit_estado: 2,
+    cit_medico: 4,
+    cit_datoUsuario: 4,
+  },
+  {
+    cit_fecha: new Date("2015-12-12"),
+    cit_estado: 4,
+    cit_medico: 6,
+    cit_datoUsuario: 5,
+  },
+  {
+    cit_fecha: new Date("2015-01-05"),
+    cit_estado: 1,
+    cit_medico: 1,
+    cit_datoUsuario: 1,
+  },
+  {
+    cit_fecha: new Date("2023-04-04"),
+    cit_estado: 4,
+    cit_medico: 9,
+    cit_datoUsuario: 7,
+  },
+  {
+    cit_fecha: new Date("2023-06-20"),
+    cit_estado: 2,
+    cit_medico: 9,
+    cit_datoUsuario: 8,
+  },
+  {
+    cit_fecha: new Date("2023-08-09"),
+    cit_estado: 5,
+    cit_medico: 10,
+    cit_datoUsuario: 9,
+  },
+  {
+    cit_fecha: new Date("2023-08-09"),
+    cit_estado: 3,
+    cit_medico: 1,
+    cit_datoUsuario: 10,
+  },
+  {
+    cit_fecha: new Date("2023-08-09"),
+    cit_estado: 2,
+    cit_medico: 1,
+    cit_datoUsuario: 4,
+  },
+  {
+    cit_fecha: new Date("2023-08-09"),
+    cit_estado: 2,
+    cit_medico: 1,
+    cit_datoUsuario: 3,
+  },
+  {
+    cit_fecha: new Date("2023-08-09"),
+    cit_estado: 4,
+    cit_medico: 1,
+    cit_datoUsuario: 2,
+  },
+  {
+    cit_fecha: new Date("2023-08-09"),
+    cit_estado: 5,
+    cit_medico: 1,
+    cit_datoUsuario: 1,
+  },
+]);
+
+db.createCollection("estado_cita");
+db.estado_cita.insertMany([
+  {
+    est_id: 1,
+    nombre: "Programado",
+  },
+  {
+    est_id: 2,
+    nombre: "Confirmada",
+  },
+  {
+    est_id: 3,
+    nombre: "en Curso",
+  },
+  {
+    est_id: 4,
+    nombre: "Completada",
+  },
+  {
+    est_id: 5,
+    nombre: "Cancelada",
+  },
+]);
+
+db.createCollection("medico");
+db.medico.insertMany([
+  {
+    med_nombre: "Sergio Sosa",
+    med_consultorio: "Centro Pediátrico Sonrisas",
+    med_especialidad: "Alergología",
+  },
+  {
+    med_nombre: "Silvia Lopez",
+    med_consultorio: "Centro Pediátrico Sonrisas",
+    med_especialidad: "Alergología",
+  },
+  {
+    med_nombre: "Nicolás Medina",
+    med_consultorio: "Servicios Médicos para Atletas y Deportistas",
+    med_especialidad: "Psiquiatría",
+  },
+  {
+    med_nombre: "Graciela Alvarez",
+    med_consultorio: "Control Diabético",
+    med_especialidad: "Neumología",
+  },
+  {
+    med_nombre: "Alicia Lopez",
+    med_consultorio: "Control Diabético",
+    med_especialidad: "Cardiología",
+  },
+  {
+    med_nombre: "Oscar Ramirez",
+    med_consultorio: "Atención Integral del Adulto Mayor",
+    med_especialidad: "Cardiología",
+  },
+  {
+    med_nombre: "Juana Ruiz",
+    med_consultorio: "Centro Médico Omega",
+    med_especialidad: "Geriatría",
+  },
+  {
+    med_nombre: "Raúl Lopez",
+    med_consultorio: "Centro Médico Omega",
+    med_especialidad: "Geriatría",
+  },
+  {
+    med_nombre: "Roberto Medina",
+    med_consultorio: "Centro Médico Omega",
+    med_especialidad: "Anestesiología y reanimación",
+  },
+  {
+    med_nombre: "Silvia Flores",
+    med_consultorio: "Atención Integral del Adulto Mayor",
+    med_especialidad: "Anestesiología y reanimación",
+  },
+]);
+
+db.createCollection("especialidad");
+db.especialidad.insertMany([
+  {
+    _id: 1,
+    esp_nombre: "Alergología",
+  },
+  {
+    _id: 2,
+    esp_nombre: "Anestesiología y reanimación",
+  },
+  {
+    _id: 3,
+    esp_nombre: "Aparato digestivo",
+  },
+  {
+    _id: 4,
+    esp_nombre: "Cardiología",
+  },
+  {
+    _id: 5,
+    esp_nombre: "Endocrinología y nutrición",
+  },
+  {
+    _id: 6,
+    esp_nombre: "Geriatría",
+  },
+  {
+    _id: 7,
+    esp_nombre: "Hematología y hemoterapia",
+  },
+  {
+    _id: 8,
+    esp_nombre: "Neumología",
+  },
+  {
+    _id: 9,
+    esp_nombre: "Pediatría",
+  },
+  {
+    _id: 10,
+    esp_nombre: "Psiquiatría",
+  },
+]);
+
+db.createCollection("consultorio");
+db.consultorio.insertMany([
+  {
+    cons_nombre: "Centro Pediátrico Sonrisas",
+  },
+  {
+    cons_nombre: "Atención Integral del Adulto Mayor",
+  },
+  {
+    cons_nombre: "Servicios Médicos para Atletas y Deportistas",
+  },
+  {
+    cons_nombre: "Nutrición Saludable y Vigilancia",
+  },
+  {
+    cons_nombre: "Control Diabético",
+  },
+  {
+    cons_nombre: "Imagenología Avanzada",
+  },
+  {
+    cons_nombre: "Salud Integral de la Mujer",
+  },
+  {
+    cons_nombre: "Centro Médico Omega",
+  },
+  {
+    cons_nombre: "Nutriólogos Profesionales",
+  },
+  {
+    cons_nombre: "Medicina General y Prevención",
+  },
+]);
+
+db.usuario.find().sort({ usu_nombres: 1 });
+
+/* db.usuario.find({ cit_fecha: 2014 - 10 - 19 }).sort({ usu_nombres: 1 });
+ */
+
+db.medico.find({ med_especialidad: "Cardiología" });
+
+db.cita.find({ cit_fecha: { $eq: ISODate("2023-08-09") } });
+
+db.medico.find();
+
+db.cita
+  .find({ cit_fecha: { $eq: ISODate("2023-08-09") }, cit_medico: 1 })
+  .count();
+
+db.cita.find();
+db.usuario.find();
+
+/* 2. Obtener las citas de una fecha en específico , donde se ordene los pacientes de manera alfabética. */
